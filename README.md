@@ -31,8 +31,3 @@ A MATLAB program that detects and recognises faces through the live webcam.
 | 2.| [Deep Learning Onramp](https://www.mathworks.com/learn/tutorials/deep-learning-onramp.html)                         |
 | 3.| [Acquiring a Single Image in a Loop](https://www.mathworks.com/help/imaq/acquiring-a-single-image-in-a-loop.html)   |
 | 4.| [Determining the Rate of Acquisition](https://www.mathworks.com/help/imaq/determining-the-rate-of-acquisition.html) |
-train.m -  0.7, randomized
-
-2 live script to test training results
-trainfaces.mlx - 0.7, randomized [45 0; 45 0]
-trainfaces_ex2.mlx - 0.5, randomized [75 0; 1 74]
