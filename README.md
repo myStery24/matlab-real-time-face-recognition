@@ -21,7 +21,7 @@ A MATLAB program that detects and recognises faces through the live webcam.
 4. Repeat Step 3 if you are collecting more face images of different person.
 5. Delete and remove undesirable collected face images.
 6. Open **train.m** and look for the line ly(23) = fullyConnectedLayer(2), change the number 2 in the fullyConnectedLayer() function to the number of sub-folder you have. I.e., 12 folders, then fullyConnectedLayer(12) 
-7. Run **train.m** to train a new network.
+7. Run **train.m** to train a new network. You will get a trained network named **facenet**.
 8. Run **test.m** to test the new network.
 
 ### References
