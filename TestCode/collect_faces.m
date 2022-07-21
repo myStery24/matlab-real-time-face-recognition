@@ -1,5 +1,4 @@
 %% Collect 150 face images from webcam
-
 clc;
 clear;
 close all;
@@ -21,8 +20,9 @@ imagefilename ='face_'; % Will append the captured face images, i.e., face_0.bmp
 while true
     % Acquire image
     e = mycam.snapshot;
-    bboxes = step(faceDetector,e);
-
+    e2 = rgb2gray(e);
+    bboxes = step(faceDetector,e2);
+    
     if(sum(sum(bboxes)) ~= 0)
         if(temp >= c)
             break;
@@ -43,11 +43,13 @@ while true
 
             % Display the image
             imshow(face);
+            pause(0.1);
             drawnow;
         end
     else
         % Display the image
         imshow(e);
+        pause(0.1);
         drawnow;
     end
 end

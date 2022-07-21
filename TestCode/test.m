@@ -42,21 +42,25 @@ for i = 1:180
     % Take a snapshot from the webcam
     e = getsnapshot(mycam);
     bboxes = step(faceDetector,e);
+    painter = insertObjectAnnotation(e,'Rectangle',bboxes,'Face');
+
 
     if(sum(sum(bboxes)) ~= 0)
         % Adjust input images
         face = imcrop(e,bboxes(1,:));
         face = imresize(face,[227 227]); % The AlexNet network needs an image input size of 227-by-227
-
+       
         % Use our pretrained AlexNet (loaded as the variable mynet) to classify the contents of all the images in the data set
         % Note that the classify function will be running many images through AlexNet
         % It may take a few seconds to execute
         label = classify(facenet,face);
 
+        imshow(painter);
         image(e); % Display the data in array e as an image
         title(char(label)); % Add the specified title to the current axes or standalone visualization
         drawnow; % Update figures and processes any pending callbacks. Use this command if you modify graphics objects and want to see the updates on the screen immediately
     else
+        imshow(painter);
         image(e);
         title('No Face Detected');
         drawnow;
