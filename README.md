@@ -1,7 +1,7 @@
 # Real-Time Face Recognition Using AlexNet-Based Transfer Learning and Stochastic Gradient Descent with Momentum Optimizer
 A MATLAB program that detects and recognises faces through the live webcam.
 
-<img src="https://github.com/myStery24/matlab-real-time-face-recognition/blob/3c2125271529485f046782be350e2f2e3235ec8d/App.png" width="400" height="400" alt="Real-time face recognition GUI" title="Real-time face recognition GUI">
+<img src="https://github.com/myStery24/matlab-real-time-face-recognition/blob/3c2125271529485f046782be350e2f2e3235ec8d/App.png" width="461" height="378" alt="Real-time face recognition GUI" title="Real-time face recognition GUI">
 
 ### Folder and Files
 | Name                                | Description                                                                                                                                                                                         |
