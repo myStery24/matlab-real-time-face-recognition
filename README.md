@@ -1,28 +1,46 @@
 # Real-Time Face Recognition Using AlexNet-Based Transfer Learning and Stochastic Gradient Descent with Momentum Optimizer
 A MATLAB program that detects and recognises faces through the live webcam.
 
-### Files
-| Name                       | Description                                                                                                                                                                                                                                                                           |
-|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Faces                      | A root folder for face images. Need to create this folder manually.                                                                                                                                                                                                                   |
-| Faces\sub-folder           | A sub-folder inside the 'Faces' folder to store/save the collected face images. Need to create this folder and place all the face images in this sub-folder manually. I.e., 'Faces\Your Name' will store all your face images and 'Faces\Name 2' will store another person's face images. |                     
-| collect_faces.m            | Open webcam and capture 150 face images.                                                                                                                                                                                                                                              |
-| examine_network_layers.mlx | A live script to examine the AlexNet layers.                                                                                                                                                                                                                                          |
-| test.m                     | Run this file to test your trained network with the live webcam.                                                                                                                                                                                                                      |
-| train.m                    | Run this file to train your network.                                                                                                                                                                                                                                                  |
-| trainfaces.mlx             | A live script to test the training result.                                                                                                                                                                                                                                            |
-| trainfaces_ex2.mlx         | Another live script to test the training result.                                                                                                                                                                                                                                      |
-| license.txt                | A license document.                                                                                                                                                                                                                                                                   |
+<img src="https://github.com/myStery24/matlab-real-time-face-recognition/blob/3c2125271529485f046782be350e2f2e3235ec8d/App.png" width="400" height="400" alt="Real-time face recognition GUI" title="Real-time face recognition GUI">
+
+### Folder and Files
+| Name                                | Description                                                                                                                                                                                         |
+|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AuthorImages                        | Images of authors/contributors of this image processing group project.                                                                                                                              |
+| Faces                               | A root folder for face images. This folder will be automatically created during the process of taking face images.                                                                                  |
+| Faces\[sub-folder-name]             | A sub-folder inside the 'Faces' folder to store/save the collected face images. I.e., 'Faces\Your Name' will store all your face images and 'Faces\Name 2' will store another person's face images. |
+| Icons                               | Images of icon to decorate the buttons.                                                                                                                                                             |
+| TestCode                            | All the source codes before merging into the MATLAB App Designer.                                                                                                                                   |
+| TestCode\collect_faces.m            | Open webcam and capture face images.                                                                                                                                                                |
+| TestCode\examine_network_layers.mlx | A live script to examine the AlexNet layers.                                                                                                                                                        |
+| TestCode\test.m                     | Run this file to test your trained network with the live webcam.                                                                                                                                    |
+| TestCode\train.m                    | Run this file to train your network.                                                                                                                                                                |
+| TestCode\trainfaces.mlx             | A live script to test the training result.                                                                                                                                                          |
+| TestCode\trainfaces_ex2.mlx         | Another live script to test the training result.                                                                                                                                                    |
+| facenet.mat                         | The newly trained network (Not provided in this file as you need to train and generate your own network).                                                                                           |
+| credits.mlapp                       | Build the credits UI in MATLAB App Designer.                                                                                                                                                        |
+| creditsGUI.m                        | Exported from credits.mlapp                                                                                                                                                                         |
+| faceRecognition.mlapp               | Build the application UI in MATLAB App Designer.                                                                                                                                                    |
+| faceRecognitionGUI.m                | Exported from faceRecognitionGUI.mlapp                                                                                                                                                              |
+| license.txt                         | A license document.                                                                                                                                                                                 |
 
 ### Steps
-1. Run **collect_faces.m** to capture 150 face images (You will get 0 - 149 images).
-2. Create a folder named Faces.
-3. Create a sub-folder to store your face images and place inside the folder named Faces. 
-4. Repeat Step 3 if you are collecting more face images of different person.
-5. Delete and remove undesirable collected face images.
-6. Open **train.m** and look for the line ly(23) = fullyConnectedLayer(2), change the number 2 in the fullyConnectedLayer() function to the number of sub-folder you have. I.e., 12 folders, then fullyConnectedLayer(12) 
-7. Run **train.m** to train a new network. You will get a trained network named **facenet**.
-8. Run **test.m** to test the new network.
+1. Run the **faceRecognitionGUI.m** in MATLAB.
+2. Click the Capture Face Image button to capture 500 face images (You will get 0 - 499 images). The face images are saved in a separate folder under the root folder Faces.
+3. Repeat Step 2 if you are collecting more face images (more than 1 person).
+4. Click the Train Model button to train your network. Wait for this process to finish.
+5. If you are satisfied with the training result, click the Begin Face Recognition button to test your newly trained network.
+6. If you would like to retrain the network, repeat Step 2 - Step 5. (Note: facenet.mat will be OVERWRITTEN, SAVE the file in somewhere else before proceeding).
+7. Click the File > Exit to exit the application/program.
+
+## Change Log
+**7/22/2022**
+- Updated folders and files.
+- Release v0.1.0 Beta.
+
+**5/10/2022**
+- Start the project.
+- Release v0.0.1.
 
 ### References
 | No. | Website                                                                                                             |
